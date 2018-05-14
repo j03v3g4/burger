@@ -44,6 +44,7 @@ var orm = {
       cb(result);
     });
   },
+  // Insert new burgers into the db
   insertOne: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
@@ -64,7 +65,7 @@ var orm = {
       cb(result);
     });
   },
-  // Update table for new burgers
+  // Update table for devoured burgers
   updateOne: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
@@ -82,6 +83,7 @@ var orm = {
       cb(result);
     });
   },
+  // Select all burgers to later be segmented on whether or not they have been eaten
   selectAll: function(table, condition, cb) {
     var queryString = "SELECT * FROM " + table;
     queryString += " WHERE ";
